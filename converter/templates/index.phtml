@@ -1,0 +1,33 @@
+{% extends "base.phtml" %}
+{% block title %}: Convert your Word .docx documents to HTML{% endblock %}
+{% block heading %}Convertly{% endblock %}
+{% block body_attributes%}id="home"{% endblock %}
+
+{% block content %}
+	<ol id="process">
+		<li id="step1">
+			<h2>Step 1:</h2>
+			<p>Select a docx document to convert to html.</p> 
+			<form id="upload_form" enctype="multipart/form-data" action="{% url upload %}" method="post">
+				<fieldset>
+					{% csrf_token %}
+					{{ form.as_p }}
+				</fieldset>
+			</form>
+			<p>To convert multiple documents at once, zip them and upload the zip file.</p>
+		</li>
+		<li id="step2">
+			<h2>Step 2:</h2>
+			<p class="waiting">Complete Step 1 to begin conversion.</p>
+			<p class="result">Magic! Let <a href="http://github.com/kaptainlange/zombie/">Zombie</a> do what it does best.</p>
+			<p class="convert_button"><a id="convert" href="#">Convert</a></p>
+		</li>
+		<li id="step3">
+			<h2>Step 3:</h2>
+			<p class="waiting">Complete Step 2 to download.</p>
+			<p class="result">Done! Click below to download your file.</p>
+			<p class="download_button"><a id="download" href="#">Download</a></p>
+			<p>We'll eventually throw out your files to conserve space, so grab them while they're fresh.</p>
+		</li>
+	</ol>
+{% endblock %}
