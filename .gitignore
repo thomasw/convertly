@@ -1,0 +1,7 @@
+*.pyc
+local_settings.py
+convertly.log
+convertly.db
+convertly.r[0-9]*.css
+convertly.r[0-9]*.js
+.DS_Store
