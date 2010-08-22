@@ -8,7 +8,7 @@ Using [pip](http://pypi.python.org/pypi/pip) + [virtualenv](http://pypi.python.o
 
 If you don't want to use virtualenv, you can do things this way using only pip:
 
-    > git clone git://github.com/thomasw/convertly.git convertly/
+    > git clone git://github.com/thomasw/convertly.git
 	> cd convertly/
     > sudo pip install -r requirements.txt
 	> cp local_settings.template.py local_settings.py
