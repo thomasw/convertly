@@ -31,7 +31,7 @@ h1 a:visited { color: #f8f0ea;}
 #process .waiting { text-align: center; color: #cdbb89;}
 #process .result  {}
 
-#footer { font-size: 120%; text-align: left; margin: 0 auto; width:920px; text-shadow: 0 2px 2px #000;}
+#footer { font-size: 120%; font-weight: bold; text-align: left; margin: 0 auto; width:920px; text-shadow: 0 2px 2px #000;}
 #footer a { text-decoration: none; }
 
 #four-oh-four-text {  -moz-box-shadow: 0px 0px 50px #000; -webkit-box-shadow: 0px 0px 50px #000; box-shadow: 0px 0px 50px #000;  -moz-border-radius: 15px 15px 15px 15px; -webkit-border-radius: 15px 15px 15px 15px; border-radius: 15px 15px 15px 15px; text-align: left; width: 900px; margin: 0 auto 3.2em auto; background-color: rgba(0,0,0,0.5); padding: 10px; border: 1px solid #000;}
