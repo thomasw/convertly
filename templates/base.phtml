@@ -5,7 +5,7 @@
 <head>{% block head %}{% load compressed %}
 	<title>Convertly{% block title %}{% endblock %}</title>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<link rel="icon" href="{{MEDIA_URL}}images/convertly_icon.png" type="image/x-icon" />	
+	<link rel="icon" href="{{MEDIA_URL}}img/convertly_icon.png" type="image/x-icon" />	
 	<!--[if gte IE 7]><!-->{% compressed_css 'main'%}<!--<![endif]-->
 	{% if DEBUG %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>{% else %}<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>{% endif %}
 	{% compressed_js 'main' %}
