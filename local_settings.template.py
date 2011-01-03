@@ -1,5 +1,7 @@
-#import logging
+import logging
 import os
+
+from sentry.client.handlers import SentryHandler
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
@@ -84,6 +86,20 @@ COMPRESS_AUTO = DEBUG
 
 # The maximum size (in bytes) that an upload will be before it gets streamed to the file system.
 FILE_UPLOAD_MAX_MEMORY_SIZE = 0
+
+# Django Sentry
+SENTRY_REMOTE_URL = 'https://xxxxxxxxxx/sentry/store/'
+SENTRY_KEY = 'xxxxxxxxxxxx'
+
+logger = logging.getLogger()
+# ensure we havent already registered the handler
+if SentryHandler not in map(lambda x: x.__class__, logger.handlers):
+	logger.addHandler(SentryHandler())
+
+	# Add StreamHandler to sentry's default so you can catch missed exceptions
+	logger = logging.getLogger('sentry.errors')
+	logger.propagate = False
+	logger.addHandler(logging.StreamHandler())
 
 # Uncomment to add a debug toolbar if in DEBUG mode - requires debug_toolbar
 # Add the debug toolbar if in debug mode

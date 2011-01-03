@@ -58,6 +58,8 @@ INSTALLED_APPS = (
 	#'south',
 	'compress',
 	'converter',
+	'gunicorn',
+	'sentry.client',
 )
 
 # Login configuration
